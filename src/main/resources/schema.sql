@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS transactions;
+
+CREATE TABLE transactions(
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+	customer_id INTEGER NOT NULL,
+	amount INTEGER NOT NULL,
+	order_date DATE NOT NULL
+	);
+	
