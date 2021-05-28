@@ -5,6 +5,7 @@ import java.util.Calendar;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,14 +22,20 @@ public class Transaction {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name = "customer_id")
-	private int customerId;
+//	@Column(name = "customer_id")
+//	private int customerId;
 	
 	@Column(name = "amount")
 	private int amount;
 	
 	@Column(name = "order_date")
 	private LocalDate orderDate;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "customer_id", nullable = false)
+	@JsonIgnore
+	private Customer customer;
+
 
 	public int getId() {
 		return id;
@@ -38,13 +45,20 @@ public class Transaction {
 		this.id = id;
 	}
 
-	public int getCustomerId() {
-		return customerId;
+	public Customer getCustomer() {
+		return customer;
 	}
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
+//	public int getCustomerId() {
+//		return customerId;
+//	}
+//
+//	public void setCustomerId(int customerId) {
+//		this.customerId = customerId;
+//	}
 
 	public int getAmount() {
 		return amount;
