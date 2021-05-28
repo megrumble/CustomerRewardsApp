@@ -1,3 +1,23 @@
+--CREATE TABLE customer(
+--    id NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--    last_name VARCHAR(255) NOT NULL,
+--    first_name VARCHAR(255) NOT NULL
+--);
+--
+--CREATE TABLE transactions(
+--	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+--	customer_id INTEGER NOT NULL,
+--	amount INTEGER NOT NULL,
+--	order_date DATE NOT NULL,
+--	CONSTRAINT fk_customer FOREIGN KEY (CUSTOMER_ID)
+--	REFERENCES customer(id)
+--	);
+
+
+INSERT INTO customer (last_name, first_name) VALUES
+('Lennon', 'John'),
+('McCartney', 'Paul');
+
 INSERT INTO transactions (customer_id, amount, order_date) values
 (1, 430, '2021-2-12'),
 (1, 300, '2021-2-13'),
@@ -11,3 +31,4 @@ INSERT INTO transactions (customer_id, amount, order_date) values
 (2, 300, '2021-5-10'),
 (1, 430, '2021-5-12'),
 (2, 300, '2021-5-13');
+
