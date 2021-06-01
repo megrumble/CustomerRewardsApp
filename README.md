@@ -5,11 +5,11 @@ run RewardsProgramAppApplication.
 
 ###To get the reward points:
 ###in Postman
-(POST) localhost:8080/transaction/
+(POST) localhost:8080/rewardsprogram/transaction/
 {
 "customerId":1,
 "year":"2021",
-"month":"5"
+"month":"3"
 }
 
 ###to run ui:
