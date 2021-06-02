@@ -16,7 +16,7 @@ run RewardsProgramAppApplication.
 
 in terminal:
 
-cd into src/main/rewards_program,
+cd into src/main/rewards_program_react,
 
 run npm install,
 
