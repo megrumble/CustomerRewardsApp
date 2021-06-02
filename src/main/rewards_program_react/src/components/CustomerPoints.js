@@ -25,11 +25,15 @@ class CustomerPoints extends React.Component{
     
 
     render() {
+        const february = "February";
+        const march = "March";
+        const may = "May";
+        const april = "April"
         return (<div>
             <h2>Reward Points</h2>
-            <Month name="February" ></Month>
-            <Month name="March"></Month>
-            <Month name="April"></Month>
+            <Month name={february} value = "2"></Month>
+            <Month name={march} value = "3"></Month>
+            <Month name={april} value = "4"></Month>
             <div className="total">
                 <button>Total</button>
                 <span></span>

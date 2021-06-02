@@ -9,8 +9,8 @@ class Month extends React.Component {
             customerId: 1,
         
             month : {
-                name: "March",
-                value: "3"
+                name: this.props.name,
+                value: this.props.value
             },
             year : "2021",
             points : 20
