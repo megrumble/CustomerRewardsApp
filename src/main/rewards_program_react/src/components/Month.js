@@ -7,20 +7,20 @@ class Month extends React.Component {
         super();
         this.state = {
             customerId: 1,
-            month : 2,
+            month : "March",
             year : "2021",
             points : 20
         }
     }
 
-    getPoints(){
+    componentDidMount(){
         const data = {
             customerId:this.customerId,
             month:this.state.month,
             year:this.state.year
 
         }
-        axios.post("/rewardsprogram/transaction/",data)
+        axios.post("/rewardsprogram/transaction/",{"customerId": 1, "year": "2021", "month": "3"})
         .then(res=>{
             const points = res.data;
             this.setState({points})
@@ -30,7 +30,7 @@ class Month extends React.Component {
     render() {
         return (
             <div className="month">
-                <button onClick={this.getPoints.bind(this)}>{this.state.month}</button>
+                <button>{this.state.month}</button>
                 <span>{this.state.points}</span>
             </div>
         )
