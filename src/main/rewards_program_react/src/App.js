@@ -5,6 +5,7 @@ import {Route,Switch} from 'react-router-dom';
 import Home from './components/Home';
 import CustomerPoints from './components/CustomerPoints';
 import CustomerTransactions from './components/CustomerTransactions';
+import Month from './components/Month';
 
 class App extends Component {
     render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route exact path="/customerTransactions/:customerId" component={CustomerTransactions}/>
           <Route exact path="/customerPoints/:customerId" component={CustomerPoints}/>
+          <Route exact path="/month/:customerId" component={Month}/>
          </Switch>
         </div>
       );

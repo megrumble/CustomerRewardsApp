@@ -21,33 +21,15 @@ class CustomerPoints extends React.Component{
             this.setState({transactionData});
         })
     }
-    // getPoints(customerId, year, month) {
-    //     customerId= this.transactionData.customerId;
-    //     year= this.transactionData.orderDate.year;
-    //     month=this.transactionData.orderDate.month
-    //     const data = {
-    //         customerId,
-    //         year,
-    //         month
-    //         // customerId:this.transactionData.customerId,
-    //         // year:this.transactionData.orderDate.year,
-    //         // month:this.transactionData.orderDate.month
-    //     }
-    //     axios.post("rewardsprogram/transaction/",data)
-    //     .then(res=>{
-    //         const pointsData = res.data;
-    //         this.setState({pointsData})
-    //     })
-    // }
 
     
 
     render() {
         return (<div>
             <h2>Reward Points</h2>
-            <Month value="February"></Month>
-            <Month value="March"></Month>
-            <Month value="April"></Month>
+            <Month name="February" ></Month>
+            <Month name="March"></Month>
+            <Month name="April"></Month>
             <div className="total">
                 <button>Total</button>
                 <span></span>
