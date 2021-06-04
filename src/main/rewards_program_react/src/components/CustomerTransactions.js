@@ -43,7 +43,7 @@ class CustomerTransactions extends React.Component{
                     <div >
                         <span><Link to={'/'}>Home</Link></span>
                         <span>          </span>
-                        <span><Link to={'/customerPoints/'+this.props.customerId}>Reward Points</Link></span>
+                        <span><Link to={'/customerPoints/'+this.props.match.params.customerId}>Reward Points</Link></span>
                     </div>
                     
                 </table>

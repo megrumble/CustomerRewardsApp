@@ -8,7 +8,7 @@ class CustomerPoints extends React.Component{
 
     state = {
         transactionData:[],
-        pointsData:0
+        pointsData:0,
         
     }
 
@@ -25,18 +25,21 @@ class CustomerPoints extends React.Component{
     
 
     render() {
+        const custId = this.props.match.params.customerId;
         const february = "February";
         const march = "March";
-        const may = "May";
-        const april = "April"
+        const april = "April";
+        const total = 0;
+       
+
         return (<div>
             <h2>Reward Points</h2>
-            <Month name={february} value = "2"></Month>
-            <Month name={march} value = "3"></Month>
-            <Month name={april} value = "4"></Month>
+            <Month name={february} value="2" customerId={custId}></Month>
+            <Month name={march} value="3" customerId={custId}></Month>
+            <Month name={april} value="4" customerId={custId}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ></Month>
             <div className="total">
                 <button>Total</button>
-                <span></span>
+                <span>{total}</span>
             </div>
             <br>
             </br>

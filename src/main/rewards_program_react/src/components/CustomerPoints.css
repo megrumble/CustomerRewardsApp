@@ -1,8 +1,9 @@
 button{
+    text-align: center;
     padding: 12px 20px;
     margin:20px;
     text-align: left;
     background-color: #4CAF50;
     color: white;
-    
+    width: 140px;
   }

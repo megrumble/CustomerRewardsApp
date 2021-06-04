@@ -6,7 +6,7 @@ class Month extends React.Component {
 
         state = {
             customerData: [],
-            customerId: 1,
+            customerId: this.props.customerId,
         
             month : {
                 name: this.props.name,
@@ -19,7 +19,7 @@ class Month extends React.Component {
 
     componentDidMount() {
     
-        axios.post("/rewardsprogram/transaction/",{"customerId": 1, "year": "2021", "month": this.convertMonth()})
+        axios.post("/rewardsprogram/transaction/",{"customerId": this.state.customerId, "year": this.state.year, "month": this.convertMonth()})
         .then(res=>{
             const points = res.data;
             this.setState({points})
